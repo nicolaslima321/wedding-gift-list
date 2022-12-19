@@ -1,29 +1,32 @@
 <template>
   <div class="default-layout">
-    <span>header</span>
+    <div class="default-layout__background">
+      <span>header</span>
 
-    <div class="default-layout__page">
-      <NuxtPage />
+      <div class="default-layout__page">
+        <NuxtPage />
+      </div>
 
-      <IzgButton>
-        teste
-      </IzgButton>
+      <span>footer</span>
     </div>
-
-    <span>footer</span>
   </div>
 </template>
 
 <script setup>
-import IzgButton from '~/components/common/IzgButton.vue';
 </script>
 
 <style lang="scss">
-[data-theme] {
-  // --layout-footer-margin: var(--unit-2000);
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .default-layout {
+  // background: url('~/assets/imgs/bg-opacity.png') no-repeat center center fixed;
+  // background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
   display: flex;
   flex-direction: column;
 }
@@ -32,6 +35,7 @@ import IzgButton from '~/components/common/IzgButton.vue';
   display: flex;
   flex-direction: column;
   min-height: 70vh;
+  max-height: 100vh;
   // padding: var(--unit-0400);
   z-index: 0;
 
@@ -42,6 +46,7 @@ import IzgButton from '~/components/common/IzgButton.vue';
     flex-direction: column;
     margin: 0 auto;
     // padding: var(--unit-0400);
+    height: 100%;
     width: 100%;
     // // margin: var(--unit-0200) auto var(--unit-0600) auto;
     max-width: 1000px;

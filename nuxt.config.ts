@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       '@izanagi-ui/core',
     ],
   },
+  // plugins: [
+  //   '~/plugins/font-awesome',
+  // ],
   vite: {
     css: {
       preprocessorOptions: {
