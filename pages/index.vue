@@ -1,10 +1,9 @@
 <template>
   <div class="index">
-    oi?
-    <IzgCarousel>
+    <IzgCarousel class="index__carousel">
       <template #content>
-        <div v-for="index in [1,2,3,4,5]" :key="index">
-          <span> sua mãe de 4 {{index}}x </span>
+        <div v-for="(src, index) in ['bg-opacity.png', 'background.jpg']" :key="index">
+          <img class="index__carousel-image" :src="imageUrl(src)" />
         </div>
       </template>
     </IzgCarousel>
@@ -18,7 +17,11 @@ import IzgCarousel from '~/components/common/IzgCarousel';
 
 <style lang="scss">
 .index {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  min-height: 100%;
+  min-width: 100%;
 }
 </style>
